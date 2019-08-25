@@ -1,6 +1,6 @@
 {
     "name": "mihome-backup-viewer",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "MiHome data extractor from iOS backups",
     "main": "dist/index.js",
     "scripts": {
@@ -21,10 +21,11 @@
     "homepage": "https://github.com/azrael/mihome-backup-viewer",
     "license": "MIT",
     "files": [
+        "bin",
         "dist"
     ],
     "bin": {
-        "mihome-backup-viewer": "dist/index.js"
+        "mihome-backup-viewer": "bin/index.js"
     },
     "repository": "https://github.com/azrael/mihome-backup-viewer.git",
     "dependencies": {
