@@ -1,6 +1,6 @@
 {
     "name": "mihome-backup-viewer",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "MiHome data extractor from iOS backups",
     "main": "dist/index.js",
     "scripts": {

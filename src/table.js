@@ -5,6 +5,8 @@
 * ─ │ ┌ ┐ └ ┘
 * ├ ┤ ┬ ┴ ┼
 * ╭ ╮ ╯ ╰ ╱ ╲
+* ═ ║ ╒ ╓ ╔ ╕ ╖ ╗ ╘ ╙ ╚ ╛ ╜ ╝ ╞ ╟
+* ╠ ╡ ╢ ╣ ╤ ╥ ╦ ╧ ╨ ╩ ╪ ╫ ╬
 * ╴ ╵ ╶ ╷ ×
 */
 
@@ -20,18 +22,20 @@ export function drawDevices(rows, head) {
     );
 
     terminal.success('There are your devices:');
-    write(`┌${sizes.map(n => '─'.repeat(n)).join('┬')}┐`);
-    write(`│${head.map((v, i) => ` ${v.name}${' '.repeat(sizes[i] - v.name.length - 1)}`).join('│')}│`);
-    rows.forEach(row => {
-        write(`├${sizes.map(n => '─'.repeat(n)).join('┼')}┤`);
+    write(`╔${sizes.map(n => '═'.repeat(n)).join('╤')}╗`);
+    write(`║${head.map((v, i) => ` ${v.name}${' '.repeat(sizes[i] - v.name.length - 1)}`).join('│')}║`);
+    rows.forEach((row, i) => {
+        i === 0 ?
+            write(`╠${sizes.map(n => '═'.repeat(n)).join('╪')}╣`) :
+            write(`╟${sizes.map(n => '─'.repeat(n)).join('┼')}╢`);
 
-        let line = '│' + head.map((v, i) => {
+        let line = '║' + head.map((v, i) => {
             let value = row[v.key] || '';
 
             return ` ${value}${' '.repeat(sizes[i] - value.length - 1)}`;
-        }).join('│') + '│';
+        }).join('│') + '║';
 
         write(line);
     });
-    write(`└${sizes.map(n => '─'.repeat(n)).join('┴')}┘`);
+    write(`╚${sizes.map(n => '═'.repeat(n)).join('╧')}╝`);
 }
