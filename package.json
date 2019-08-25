@@ -1,0 +1,46 @@
+{
+    "name": "mihome-backup-viewer",
+    "version": "0.0.1",
+    "description": "MiHome data extractor from iOS backups",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "NODE_ENV=production babel src --out-dir dist",
+        "dev": "babel-node src/index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "mihome",
+        "xiaomi",
+        "backup",
+        "token",
+        "homekit",
+        "homebridge",
+        "miio"
+    ],
+    "author": "Dmitry Mulyavka",
+    "homepage": "https://github.com/azrael/mihome-backup-viewer",
+    "license": "MIT",
+    "files": [
+        "dist"
+    ],
+    "bin": {
+        "mihome-backup-viewer": "dist/index.js"
+    },
+    "repository": "https://github.com/azrael/mihome-backup-viewer.git",
+    "dependencies": {
+        "@babel/runtime": "7.5.5",
+        "aes-js": "3.1.2",
+        "ansi-colors": "4.1.1",
+        "ibackuptool": "git://github.com/richinfante/iphonebackuptools",
+        "inquirer": "7.0.0",
+        "sqlite": "3.0.3",
+        "tmp": "0.1.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "7.5.5",
+        "@babel/core": "7.5.5",
+        "@babel/node": "7.5.5",
+        "@babel/plugin-transform-runtime": "7.5.5",
+        "@babel/preset-env": "7.5.5"
+    }
+}
