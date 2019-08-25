@@ -7,12 +7,12 @@ information.
 But sometimes miIO can't extract the token, or an extracted token is invalid, or even miIO does not
 see the device at all. In this case, you can get the needed information from the `Mi Home` app by following
 [this steps](https://github.com/jghaanstra/com.xiaomi-miio/blob/master/docs/obtain_token.md#ios-users).
-But this instruction is rather complicated. So here is `mihome-backup-viewer`! This tool executes these steps for
+But this instruction is complex. So here is `mihome-backup-viewer`! This tool executes these steps for
 you. All you need is:
 
 - create an unencrypted iOS backup;
-- run `mihome-backup-viewer` and follow it's instructions;
-- copy and paste desired information.
+- run `mihome-backup-viewer` and follow the instructions;
+- copy and paste the desired information.
 
 ## Install
 
@@ -24,7 +24,7 @@ npm i -g mihome-backup-viewer
 
 ## How to use
 
-Just run this command and follow it's instructions:
+Just run this command and follow the instructions:
 
 ```bash
 mihome-backup-viewer
